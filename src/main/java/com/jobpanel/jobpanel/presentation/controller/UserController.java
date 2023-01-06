@@ -1,14 +1,13 @@
 package com.jobpanel.jobpanel.presentation.controller;
 
-import com.jobpanel.jobpanel.business.domain.Role;
-import com.jobpanel.jobpanel.business.domain.User;
+import com.jobpanel.jobpanel.business.entity.Role;
+import com.jobpanel.jobpanel.business.entity.User;
 import com.jobpanel.jobpanel.business.service.interfaces.UserService;
 import com.jobpanel.jobpanel.dataAccess.repository.UserRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

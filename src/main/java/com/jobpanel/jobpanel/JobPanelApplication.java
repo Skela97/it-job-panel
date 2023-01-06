@@ -1,7 +1,7 @@
 package com.jobpanel.jobpanel;
 
-import com.jobpanel.jobpanel.business.domain.Role;
-import com.jobpanel.jobpanel.business.domain.User;
+import com.jobpanel.jobpanel.business.entity.Role;
+import com.jobpanel.jobpanel.business.entity.User;
 import com.jobpanel.jobpanel.business.service.interfaces.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

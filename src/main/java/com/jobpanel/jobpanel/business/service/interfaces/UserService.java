@@ -1,6 +1,7 @@
 package com.jobpanel.jobpanel.business.service.interfaces;
 
-import com.jobpanel.jobpanel.business.domain.*;
+import com.jobpanel.jobpanel.business.entity.Role;
+import com.jobpanel.jobpanel.business.entity.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.jobpanel.jobpanel.business.domain;
+package com.jobpanel.jobpanel.business.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
