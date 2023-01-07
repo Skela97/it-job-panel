@@ -3,7 +3,7 @@ package com.jobpanel.jobpanel.business.security.filter;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jobpanel.jobpanel.business.dto.UserAuthenticatedDTO;
+import com.jobpanel.jobpanel.business.dto.user.UserAuthenticatedDTO;
 import com.jobpanel.jobpanel.business.entity.Role;
 import com.jobpanel.jobpanel.business.service.interfaces.UserService;
 import lombok.extern.slf4j.Slf4j;

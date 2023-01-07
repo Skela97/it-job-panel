@@ -1,15 +1,13 @@
-package com.jobpanel.jobpanel.business.entity;
+package com.jobpanel.jobpanel.business.dto.company;
 
+import com.jobpanel.jobpanel.business.entity.Town;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.util.List;
-
-@Entity @Data @NoArgsConstructor @AllArgsConstructor
-public class Company {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+@Data @NoArgsConstructor @AllArgsConstructor
+public class GetCompanyDTO {
     private Long id;
     private String name;
     private String description;
@@ -18,10 +16,7 @@ public class Company {
     private int foundingYear;
     private String email;
     private String companyHeadquarters;
-    private String phoneNumber;
+    private int phoneNumber;
     private int averageRating;
-    @OneToOne(fetch = FetchType.LAZY)
-    private User companyAdmin;
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Town> towns;
 }

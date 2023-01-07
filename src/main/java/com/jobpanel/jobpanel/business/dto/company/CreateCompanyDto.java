@@ -1,0 +1,21 @@
+package com.jobpanel.jobpanel.business.dto.company;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data @NoArgsConstructor @AllArgsConstructor
+public class CreateCompanyDto {
+    private String name;
+    private String description;
+    private String field;
+    private String employeeNumber;
+    private int foundingYear;
+    private String email;
+    private String companyHeadquarters;
+    private String phoneNumber;
+    private int averageRating;
+    private List<Long> townIds;
+}
