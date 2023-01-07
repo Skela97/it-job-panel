@@ -2,6 +2,7 @@ package com.jobpanel.jobpanel.business.security.config;
 
 import com.jobpanel.jobpanel.business.security.filter.CustomAuthenticationFilter;
 import com.jobpanel.jobpanel.business.security.filter.CustomAuthorizationFilter;
+import com.jobpanel.jobpanel.business.service.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +27,7 @@ import static org.springframework.http.HttpMethod.GET;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserDetailsService userDetailsService;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final UserService userService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -38,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.authorizeRequests().antMatchers(GET, "/api/users/**").hasAnyAuthority("ROLE_USER");
         http.authorizeRequests().anyRequest().authenticated();
-        http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
+        http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean(),userService));
         http.cors().and();
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }

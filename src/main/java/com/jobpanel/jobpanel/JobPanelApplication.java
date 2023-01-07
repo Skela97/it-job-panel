@@ -26,18 +26,14 @@ public class JobPanelApplication {
 	@Bean
 	CommandLineRunner run(UserService userService){
 		return args->{
-			userService.saveRole(new Role(null,"ROLE_USER"));
-			userService.saveRole(new Role(null,"ROLE_MANAGER"));
-			userService.saveRole(new Role(null,"ROLE_ADMIN"));
-			userService.saveRole(new Role(null,"ROLE_SUPER_ADMIN"));
+			userService.saveRole(new Role(null,"USER"));
+			userService.saveRole(new Role(null,"FIRM_ADMIN"));
 
-			userService.saveUser(new User(null,"John Travolta","John","1234",new ArrayList<>()));
-			userService.saveUser(new User(null,"John Travolta2","John2","1234",new ArrayList<>()));
-			userService.saveUser(new User(null,"John Travolta3","John3","1234",new ArrayList<>()));
+			userService.saveUser(new User(null,"Firm Admin","FirmAdmin","1234",new ArrayList<>()));
+			userService.saveUser(new User(null,"User","User","1234",new ArrayList<>()));
 
-			userService.addRoleToUser("john","ROLE_USER");
-			userService.addRoleToUser("john2","ROLE_ADMIN");
-			userService.addRoleToUser("john2","ROLE_SUPER_ADMIN");
+			userService.addRoleToUser("FirmAdmin","FIRM_ADMIN");
+			userService.addRoleToUser("User","USER");
 		};
 	}
 }
