@@ -32,8 +32,28 @@ public class CompanyServiceImpl implements CompanyService {
     @Override
     public GetCompanyDTO getCompanyForAuthenticatedAdmin() {
         Company company = companyRepository.findByCompanyAdmin_id(this.getAdmin().getId());
+        if (company == null) {
+            return null;
+        }
 
-        return null;
+        return this.generateCompanyDTOFromCompany(company);
+    }
+
+    public GetCompanyDTO generateCompanyDTOFromCompany(Company company)
+    {
+        return new GetCompanyDTO(
+                company.getId(),
+                company.getName(),
+                company.getDescription(),
+                company.getField(),
+                company.getEmployeeNumber(),
+                company.getFoundingYear(),
+                company.getEmail(),
+                company.getCompanyHeadquarters(),
+                company.getPhoneNumber(),
+                company.getAverageRating(),
+                new ArrayList<>()
+        );
     }
 
     public Company generateCompanyFromDTO(CreateCompanyDto createCompanyDto){

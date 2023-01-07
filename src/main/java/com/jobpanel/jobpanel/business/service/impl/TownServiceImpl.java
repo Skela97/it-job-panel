@@ -4,7 +4,6 @@ import com.jobpanel.jobpanel.business.entity.Town;
 import com.jobpanel.jobpanel.business.service.interfaces.TownService;
 import com.jobpanel.jobpanel.dataAccess.repository.TownRepository;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

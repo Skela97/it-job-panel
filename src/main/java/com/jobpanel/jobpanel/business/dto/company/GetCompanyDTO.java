@@ -16,7 +16,7 @@ public class GetCompanyDTO {
     private int foundingYear;
     private String email;
     private String companyHeadquarters;
-    private int phoneNumber;
+    private String phoneNumber;
     private int averageRating;
     private List<Town> towns;
 }
