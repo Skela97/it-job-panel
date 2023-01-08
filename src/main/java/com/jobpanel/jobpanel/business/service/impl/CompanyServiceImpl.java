@@ -51,7 +51,7 @@ public class CompanyServiceImpl implements CompanyService {
                 company.getEmail(),
                 company.getCompanyHeadquarters(),
                 company.getPhoneNumber(),
-                company.getAverageRating(),
+                10,
                 new ArrayList<>()
         );
     }
@@ -67,7 +67,6 @@ public class CompanyServiceImpl implements CompanyService {
                 createCompanyDto.getEmail(),
                 createCompanyDto.getCompanyHeadquarters(),
                 createCompanyDto.getPhoneNumber(),
-                createCompanyDto.getAverageRating(),
                 getAdmin(),
                 getTowns(createCompanyDto.getTownIds())
         );

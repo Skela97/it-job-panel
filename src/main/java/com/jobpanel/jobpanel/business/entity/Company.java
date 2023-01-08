@@ -19,7 +19,6 @@ public class Company {
     private String email;
     private String companyHeadquarters;
     private String phoneNumber;
-    private int averageRating;
     @OneToOne(fetch = FetchType.LAZY)
     private User companyAdmin;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)

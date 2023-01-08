@@ -13,7 +13,7 @@ public class CompanyController {
     private final CompanyService companyService;
 
     @GetMapping
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<GetCompanyDTO> getCompanyForGivenAdmin(){
        GetCompanyDTO companyDTO =  companyService.getCompanyForAuthenticatedAdmin();
        if(companyDTO == null){
@@ -25,7 +25,7 @@ public class CompanyController {
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.OK)
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
     public void createCompany(@RequestBody CreateCompanyDto createCompanyDto) {
         companyService.createCompany(createCompanyDto);
     }
