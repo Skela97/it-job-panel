@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Data @NoArgsConstructor @AllArgsConstructor
-public class CreateCompanyDto {
+public class CreateCompanyDTO {
     private String name;
     private String description;
     private String field;
