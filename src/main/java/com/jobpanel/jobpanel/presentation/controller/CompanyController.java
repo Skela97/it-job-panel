@@ -21,6 +21,7 @@ public class CompanyController {
     }
 
     @PutMapping
+    @ResponseStatus(value = HttpStatus.OK)
     public void updateCompany(@RequestBody UpdateCompanyDTO updateCompanyDTO){
         companyService.updateCompany(updateCompanyDTO);
     }

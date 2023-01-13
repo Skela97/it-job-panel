@@ -63,6 +63,9 @@ public class CompanyServiceImpl implements CompanyService {
         return this.createGetCompanyDTOFromCompany(company.get());
     }
 
+    /**
+     * Implementirati do kraja kada se dodaju komentari (Average Rating trenutno hardcodovan).
+     */
     public GetCompanyDTO createGetCompanyDTOFromCompany(Company company)
     {
         return new GetCompanyDTO(
@@ -81,6 +84,9 @@ public class CompanyServiceImpl implements CompanyService {
     }
 
     public Company createCompanyFromCreateCompanyDTO(CreateCompanyDTO createCompanyDto){
+
+        User admin = getAdmin();
+
         return new Company(
                 null,
                 createCompanyDto.getName(),

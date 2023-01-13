@@ -10,6 +10,5 @@ public interface CompanyService {
     public void updateCompany(UpdateCompanyDTO updateCompanyDTO);
     public void deleteCompany(DeleteCompanyDTO deleteCompanyDTO);
     public GetCompanyDTO getCompanyForAuthenticatedAdmin();
-
     public GetCompanyDTO getCompany(Long idCompany);
 }
